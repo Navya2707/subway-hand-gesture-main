@@ -1,31 +1,50 @@
-# Gesture Controlled Subway Surfers
+# 🎮 Subway Surfers Hand Gesture Controller
 
-This project lets you play Subway Surfers in BlueStacks using your hand gestures detected by a webcam.
+Control the popular **Subway Surfers** game using just your **hand gestures**!  
+This project uses **Python**, **OpenCV**, and **MediaPipe** to detect real-time hand movements via webcam and map them to keyboard inputs — allowing you to play the game touch-free. 🖐️➡️💻
 
-# How to Set Up
+---
 
-1. Install requirements:
+## 🧠 Project Objective
 
-pip install -r requirements.txt
+To build a computer vision-based system that detects **hand gestures in real-time** and uses them to control the **Subway Surfers** game using simulated keystrokes (left, right, jump, roll).
 
+---
 
-2. Run BlueStacks and open Subway Surfers.
-   - Ensure the game controls are mapped to arrow keys.
+## 🎥 How It Works
 
-3. Launch the script:
+- 👁️ Webcam captures live video
+- 🧠 MediaPipe detects hand landmarks (e.g., palm, fingers)
+- 🎯 Specific gestures (like swipes or finger positions) are mapped to:
+  - **Left/Right Swipe** → Move left/right
+  - **Hand Up** → Jump
+  - **Hand Down** → Roll
+- 💻 PyAutoGUI or `keyboard` library simulates the required keyboard key press
 
+---
 
-python gesture_control.py
+## 🛠️ Technologies Used
 
-4. Use the following gestures:
-   - Index finger up → Jump (UP arrow)
-   - Index + middle finger → Slide (DOWN arrow)
-   - 3 fingers → Left
-   - 4 fingers → Right
+| Tool/Library     | Purpose                                 |
+|------------------|------------------------------------------|
+| Python           | Main programming language                |
+| OpenCV           | Access webcam and process image frames   |
+| MediaPipe        | Real-time hand tracking and gesture detection |
+| PyAutoGUI/keyboard | Simulate keyboard inputs to game        |
+| Numpy            | Image processing and matrix operations   |
 
-Make sure your webcam is clear and your hand is visible!
+---
 
-# Files
+## 📁 Folder Structure
 
-- `gesture_control.py` - Main script.
-- `requirements.txt` - Dependencies.
+subway-hand-gesture/
+│
+├── hand_gesture_controller.py # Main script
+├── requirements.txt # Python dependencies
+├── utils/ # Utility scripts (optional)
+├── assets/ # Gesture reference images (optional)
+└── README.md # Project documentation
+
+yaml
+Copy
+Edit
